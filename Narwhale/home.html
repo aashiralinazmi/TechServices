@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech with Narwhal3</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-image">
+        <img src="/assets/Home Page/background-image.png" alt="Background Image">
+    </div>
+    <!-- Navbar -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top container mt-2 mynav">
+            <div class="container">
+                <a class="navbar-brand" href="home.html">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c3e7c5ea38fb32302a94e7c73298c558769a811b96582fdf24bea5d8330bd129?apiKey=38506aaa2b0847d8ae31c3c37ca88863&"
+                        alt="Company logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #D9D9D9;" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #D9D9D9;" href="#!">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #D9D9D9;" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #D9D9D9;" href="Blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #D9D9D9;" href="shop.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn" data-bs-toggle="modal" data-bs-target="#loginModal"
+                                style="background-color: #00ffff;">
+                                Sign In
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- MODALS -->
+    <!--Login In. -->
+    <div class="login">
+        <!-- Modal Structure -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                        <button type="button" class="btn-close text-white" data-bs-dismiss="modal"
+                            aria-label="Close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <section class="registration-main-wrapper" id="registrationForm">
+                                <div class="row">
+                                    <div class="col-md-6 d-flex justify-content-end">
+                                        <div class="registration-image-container bg-warning">
+                                            <img loading="lazy" src="/assets/Popup/Holloway-Narwhals 1.png"
+                                                alt="Decorative background image"
+                                                class="registration-background-image" />
+                                            <div class="registration-image-overlay"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 content-column">
+                                        <form class="form-container">
+                                            <h2 class="login-title">Login</h2>
+                                            <h3 class="login-subtitle">Sign in to your account</h3>
+                                            <p class="login-message">Welcome back! Please enter your details</p>
+                                            <input class="form-control username-field" type="email" id="username"
+                                                placeholder="Username/ Email" aria-label="Username or Email" />
+                                            <input class="form-control password-field" type="password" id="password"
+                                                placeholder="Password" aria-label="Password" />
+                                            <div
+                                                class="form-check form-options d-flex align-items-center justify-content-between">
+                                                <div class="form-check-inline remember-password">
+                                                    <input type="checkbox"
+                                                        class="form-check-input remember-password-checkbox"
+                                                        id="remember" />
+                                                    <label for="remember"
+                                                        class="form-check-label remember-password-label">Remember
+                                                        Password</label>
+                                                </div>
+                                                <button type="button" class="btn text-white" data-bs-toggle="modal"
+                                                    data-bs-target="#confirmemailModal">Forget Password</button>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary signin-button">Sign In</button>
+                                            <p class="social-login text-center mt-4">or sign in with</p>
+                                            <div class="d-flex flex-column gap-2">
+                                                <button type="button" class="btn btn-outline-secondary google-login">
+                                                    <img src="/assets/Popup/Google logo.svg" alt="Google logo"
+                                                        class="google-logo" />
+                                                    <span>Continue with Google</span>
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary apple-login">
+                                                    <img src="/assets/Popup/Apple.svg" alt="Apple logo"
+                                                        class="apple-logo" />
+                                                    <span>Continue with Apple</span>
+                                                </button>
+                                            </div>
+                                            <div class="footer-message text-center mt-4 d-grid gap-2">
+                                                <p class="m-0">Don't have an account? <a data-bs-toggle="modal"
+                                                        data-bs-target="#registrationModal">Sign Up</a></p>
+                                            </div>
+                                    </div>
+                                    </form>
+                                </div>
+                        </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- forgot modal -->
+    <div class="modal fade" id="ForgetModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="fp">
+                    <div class="container">
+                        <section class="registration-main-wrapper" id="registrationForm">
+                            <div class="row">
+                                <div class="col-md-6 d-flex justify-content-end">
+                                    <div class="registration-image-container">
+                                        <img loading="lazy" src="/assets/Popup/Holloway-Narwhals 1.png"
+                                            alt="Decorative background image" class="registration-background-image" />
+                                        <div class="registration-image-overlay"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 content-column">
+                                    <form class="form-container">
+                                        <h2 class="signup2-title">Forget Password</h2>
+                                        <h3 class="signup2-subtitle"> Enter New Password </h3>
+                                        <p class="signup2-message">Welcome back! Please enter your details</p>
+                                        <input class="form-control pswd-field" type="text" id="password"
+                                            placeholder="New Password" aria-label="Username or Email" />
+                                        <input class="form-control newpswd-field" type="password" id="password"
+                                            placeholder="Confirm New Password" aria-label="Password" />
+                                        <button type="button" class="btn Continue-button" data-bs-toggle="modal"
+                                            data-bs-target="#confirmemailModal">Continue</button>
+                                        <p class="social-signup2 text-center mt-4">or sign in with</p>
+                                        <div class="d-flex flex-column gap-2">
+                                            <button type="button" class="btn btn-light google-signup2">
+                                                <img src="/assets/Popup/Google logo.svg" alt="Google logo" />
+                                                <span>Continue with Google</span>
+                                            </button>
+                                            <button type="button" class="btn btn-light apple-signup2">
+                                                <img src="/assets/Popup/Apple.svg" alt="Apple logo" />
+                                                <span>Continue with Apple</span>
+                                            </button>
+                                        </div>
+                                        <div class="footer-message">
+                                            <p class="mt-5">
+                                                Don't have an account?
+                                                <a data-bs-toggle="modal" data-bs-target="#registrationModal">Sign
+                                                    Up</a>
+                                            </p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- confirm modal -->
+    <div class="modal fade" id="confirmemailModal" tabindex="-1" aria-labelledby="ForgotPasswordModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content forgot-main-container">
+                <div class="container-fluid">
+                    <div class="row g-0">
+                        <div class="col-md-6 forgot-registration-image-container">
+                            <img loading="lazy" src="/assets/Popup/Holloway-Narwhals 1.png"
+                                alt="Decorative background image" class="forgot-registration-background-image" />
+                        </div>
+                        <div class="col-md-6 forgot-content-column">
+                            <form class="forgot-form-container">
+                                <h2 class="forgot-title">Forget Password</h2>
+                                <h3 class="forgot-subtitle">Enter Email Address</h3>
+                                <p class="forgot-message">We will send a link to your email address, kindly enter it for
+                                    a new password</p>
+                                <input class="form-control forgot-username-field" type="text" id="forgot-username"
+                                    placeholder="Email Address" aria-label="Username or Email" />
+                                <button type="button" class="btn forgot-verification-button continue-button"
+                                    data-bs-toggle="modal" data-bs-target="#ForgetModal">Send Verification Code</button>
+                                <p class="forgot-social-signup text-center mt-4">or sign in with</p>
+                                <div class="d-flex flex-column gap-2">
+                                    <button type="button" class="btn btn-light forgot-google-signup">
+                                        <img src="/assets/Popup/Google logo.svg" alt="Google logo" />
+                                        <span>Continue with Google</span>
+                                    </button>
+                                    <button type="button" class="btn btn-light forgot-apple-signup">
+                                        <img src="/assets/Popup/Apple.svg" alt="Apple logo" />
+                                        <span>Continue with Apple</span>
+                                    </button>
+                                </div>
+                                <p class="forgot-footer-message text-center mt-4">
+                                    Don't have an account?
+                                    <a data-bs-toggle="modal" data-bs-target="#registrationModal"
+                                        class="text-decoration-underline forgot-bold-underline">Signup</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Registration -->
+    <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registrationModalLabel">Registration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Registration form content -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 order-md-1">
+                                <div class="rform-image-container">
+                                    <img loading="lazy" src="/assets/Popup/Holloway-Narwhals 1.png"
+                                        alt="Decorative background image" class="rform-background-image" />
+                                    <div class="rform-image-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 order-md-2 rform-form-column">
+                                <div class="rform-form-wrapper">
+                                    <h1 class="rform-register-title">Register</h1>
+                                    <p class="rform-create-account">Create new account</p>
+                                    <p class="rform-form-description">Please enter your details</p>
+                                    <div class="form-group rform-form-group">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input type="text" id="rform-firstName"
+                                                    class="form-control rform-form-control" placeholder="First Name"
+                                                    aria-label="First Name" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" id="rform-lastName"
+                                                    class="form-control rform-form-control" placeholder="Last Name"
+                                                    aria-label="Last Name" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group rform-form-group">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <input type="text" id="rform-occupation"
+                                                    class="form-control rform-form-control" placeholder="Occupation"
+                                                    aria-label="Occupation" />
+                                            </div>
+                                            <div class="col-md-7">
+                                                <input type="text" id="rform-brandName"
+                                                    class="form-control rform-form-control option"
+                                                    placeholder="Brand Name (optional)" aria-label="Brand Name" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group rform-form-group">
+                                        <input type="email" id="rform-email" class="form-control rform-form-control"
+                                            placeholder="Email Address" aria-label="Email Address" />
+                                    </div>
+                                    <div class="form-group rform-form-group">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <input type="text" id="rform-phoneCode"
+                                                    class="form-control rform-form-control" placeholder="00"
+                                                    aria-label="Phone Code" />
+                                            </div>
+                                            <div class="col-md-9">
+                                                <input type="text" id="rform-phoneNumber"
+                                                    class="form-control rform-form-control" placeholder="Phone Number"
+                                                    aria-label="Phone Number" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn rform-submit-button">Create my account</button>
+                                    <p class="text-center mt-4" style="color: #d9d9d9;">or signup with</p>
+                                    <a href="https://accounts.google.com/" class="rform-social-signup">
+                                        <img loading="lazy" src="/assets/Popup/Google logo.svg" alt="Google Icon"
+                                            class="rform-google-icon">
+                                        <div class="ml-2">Continue with Google</div>
+                                    </a>
+                                    <a href="https://appleid.apple.com/" class="rform-apple-signup">
+                                        <img loading="lazy" src="/assets/Popup/Apple.svg" alt="Apple Icon"
+                                            class="rform-apple-icon">
+                                        <div class="ml-2">Continue with Apple</div>
+                                    </a>
+                                    <p class="rform-login-text">Already a member?
+                                        <button type="button" class="btn text-white" data-bs-toggle="modal"
+                                            data-bs-target="#loginModal">Log
+                                            In</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODALS -->
+
+    <!-- introduction -->
+    <div class="container pt-5 home">
+        <div class="bg-dark text-white p-5 mb-0 rounded">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p style="color: #AAFFF5;"><strong><small>Protecting Environment one byte at a
+                                time.</small></strong></p>
+                    <h1 class="display-4 head">Tech with Purpose</h1>
+                    <p class="lead" style="color: #D9D9D9;">
+                        Narwhal3 is <span class="text-white">the first eco-aware tech company</span>, providing
+                        top-notch tech and marketing
+                        services
+                        including web development, branding, digital marketing, and more.
+                    </p>
+                    <p>
+                        <a class="btn btn-dark mb-2" href="#" role="button">Branding And Strategy</a>
+                        <a class="btn btn-dark mb-2" href="#" role="button">Website Design</a>
+                        <a class="btn btn-dark mb-2" href="#" role="button">App Development</a>
+                        <a class="btn btn-dark mb-2" href="#" role="button">Web Development</a>
+                        <a class="btn btn-dark mb-2" href="#" role="button">Software Development</a>
+                    </p>
+                    <a class="onbutton" href="#pricing">
+                        <div class="onbutton-text">
+                            <span class="first">See Our Plan</span>
+                            <span class="second">See Our plan</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center">
+                        <img src="/assets/Home Page/Hero Image.png" alt="Tech Image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- let's Add you -->
+    <div class="container mx-auto sliding-container">
+        <div class="row">
+            <div class="col-12">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/89030aeaedaea4ac730cddda34d292e442ec93404037e8fac0398cd5d89a7f4e?apiKey=38506aaa2b0847d8ae31c3c37ca88863"
+                    alt="" class="img-fluid sliding-image">
+                <!-- onload="this.style.animationPlayState = 'running'" -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Work Section -->
+    <div class="container" data-aos="fade-up" style="margin-top: 10%;">
+        <h1 style="color: #D9D9D9;">Work</h1>
+    </div>
+
+    <!-- Logo and Website Designing Section -->
+    <div class="container mt-4 mb-4" data-aos="fade-up">
+        <div class="row">
+            <div class="col-12 col-md-4" data-aos="fade-up">
+                <div class="work-service-block work-glassmorphic" style="height: 400px;">
+                    <h4 class="work-title">Logo Designing</h4>
+                    <img src="/assets/Home Page/Logo Designing.png" alt="Logo Designing Image" class="img-fluid"
+                        style="height: 350px;">
+                </div>
+            </div>
+            <div class="col-12 col-md-8" data-aos="fade-up">
+                <div class="work-service-block work-glassmorphic">
+                    <h4 class="work-title">Website Designing</h4>
+                    <p class="work-text">Services include web development, branding, digital marketing.</p>
+                    <img src="/assets/Home Page/Website Designing.png" alt="Website Designing Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 col-md-6" data-aos="fade-up">
+                <div class="work-service-block work-glassmorphic" style="height: 300px;">
+                    <h2 class="work-title">Software Development</h2>
+                    <p class="work-text">Services include web development, branding, digital marketing.</p>
+                    <img src="/assets/Home Page/Software Development.png" alt="Software Development Image"
+                        class="img-fluid" style="height: 205px;">
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12" data-aos="fade-up">
+                        <div class="work-service-block work-glassmorphic" style="height: 400px;">
+                            <h2 class="work-title">Digital Marketing</h2>
+                            <p class="work-text">Services include web development, branding, digital marketing.</p>
+                            <img src="/assets/Home Page/Digital Marketing.png" alt="Digital Marketing Image"
+                                class="img-fluid" style="height: 330px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6" data-aos="fade-up">
+                <div class="work-service-block work-glassmorphic">
+                    <h2 class="work-title">App Development</h2>
+                    <p class="work-text">Services include web development, branding, digital marketing.</p>
+                    <img src="/assets/Home Page/App Development.png" alt="App Development Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div class="container" id="services" data-aos="fade-up" style="margin-top: 10%;">
+        <h4 class="section-title text-left">Services</h4>
+        <div class="row row-cols-1 row-cols-md-4 g-3">
+            <div class="col">
+                <div class="service-item" style="border: 0.5px solid #474545;">
+                    <img src="/assets/Home Page/Logo Icon.svg" alt="" class="service-icon img-fluid mb-3">
+                    <h4 style="color: #D9D9D9;">Brand Design</h4>
+                    <ul class="service-list">
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Social
+                            Media Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Video
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Influencer Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i> Ads
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Affiliated Marketing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="service-item" style="border: 0.5px solid #474545;">
+                    <img src="/assets/Home Page/Digital Marketing Icon.svg" alt="" class="service-icon img-fluid mb-3">
+                    <h4 style="color: #D9D9D9;">Digital Marketing</h4>
+                    <ul class="service-list">
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Social
+                            Media Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Video
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Influencer Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i> Ads
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Affiliated Marketing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="service-item" style="border: 0.5px solid #474545;">
+                    <img src="/assets/Home Page/Website Design  Icon.png" alt="" class="service-icon img-fluid mb-3">
+                    <h4 style="color: #D9D9D9;">Web Design</h4>
+                    <ul class="service-list">
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Social
+                            Media Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Video
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Influencer Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i> Ads
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Affiliated Marketing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="service-item" style="border: 0.5px solid #474545;">
+                    <img src="/assets/Home Page/App Development Icon.svg" alt="" class="service-icon img-fluid mb-3">
+                    <h4 style="color: #D9D9D9;">App Development</h4>
+                    <ul class="service-list">
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Social
+                            Media Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Video
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Influencer Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i> Ads
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Affiliated Marketing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-100"></div> <!-- Add a column break after 4 columns -->
+            <div class="col">
+                <div class="service-item" style="border: 0.5px solid #474545;">
+                    <img src="/assets/Home Page/Web Development Icon.svg" alt="" class="service-icon img-fluid mb-3">
+                    <h4 style="color: #D9D9D9;">Web Development</h4>
+                    <ul class="service-list">
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Social
+                            Media Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Video
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Influencer Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i> Ads
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Affiliated Marketing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="service-item" style="border: 0.5px solid #474545;">
+                    <img src="/assets/Home Page/Software Development Icon.svg" alt=""
+                        class="service-icon img-fluid mb-3">
+                    <h5 style="color: #D9D9D9;">Software Development</h5>
+                    <ul class="service-list">
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Social
+                            Media Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Video
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Influencer Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i> Ads
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Affiliated Marketing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="service-item" style="border: 0.5px solid #474545;">
+                    <img src="/assets/Home Page/SEO Icon.svg" alt="" class="service-icon img-fluid mb-3">
+                    <h4 style="color: #D9D9D9;">SEO</h4>
+                    <ul class="service-list">
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Social
+                            Media Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Video
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Influencer Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i> Ads
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Affiliated Marketing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="service-item" style="border: 0.5px solid #474545;">
+                    <img src="/assets/Home Page/SEO Icon.svg" alt="" class="service-icon img-fluid mb-3">
+                    <h4 style="color: #D9D9D9;">SEO</h4>
+                    <ul class="service-list">
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Social
+                            Media Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Video
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Influencer Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i> Ads
+                            Marketing</li>
+                        <li style="color: #D9D9D9;"><i class="fas fa-check-circle" style="color: #00ffff;"></i>
+                            Affiliated Marketing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How we work -->
+    <div class="container text-center" data-aos="fade-up" style="margin-top: 10%;">
+        <h4 class="section-title text-left">How We Work</h4>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4 d-flex">
+                    <section class="project-container">
+                        <h2 class="project-title">Project Focus</h2>
+                        <p class="project-description">
+                            Dedication is key. We commit to a select number of projects, with one designer and
+                            myself
+                            leading each. This guarantees focused attention and exceptional outcomes.
+                        </p>
+                    </section>
+                </div>
+                <div class="col-md-4 d-flex">
+                    <section class="project-container">
+                        <h2 class="project-title">Project Focus</h2>
+                        <p class="project-description">
+                            Dedication is key. We commit to a select number of projects, with one designer and
+                            myself
+                            leading each. This guarantees focused attention and exceptional outcomes.
+                        </p>
+                    </section>
+                </div>
+                <div class="col-md-4 d-flex">
+                    <section class="project-container">
+                        <h2 class="project-title">Project Focus</h2>
+                        <p class="project-description">
+                            Dedication is key. We commit to a select number of projects, with one designer and
+                            myself
+                            leading each. This guarantees focused attention and exceptional outcomes.
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- pricing  -->
+    <div id="pricing">
+        <div class="container" data-aos="fade-up" style="margin-top: 10%;">
+            <h2 class="text-left pricing-heading">Pricing</h2>
+            <ul class="nav nav-tabs-services" id="pricingTab" role="tablist">
+                <li class="nav-item-services">
+                    <a class="nav-link active" id="branding-tab" data-bs-toggle="tab" href="#branding" role="tab"
+                        aria-controls="branding" aria-selected="true">Branding & Strategy</a>
+                </li>
+                <li class="nav-item-services">
+                    <a class="nav-link" id="website-tab" data-bs-toggle="tab" href="#website" role="tab"
+                        aria-controls="website" aria-selected="false">Website Design</a>
+                </li>
+                <li class="nav-item-services">
+                    <a class="nav-link" id="app-tab" data-bs-toggle="tab" href="#app" role="tab" aria-controls="app"
+                        aria-selected="false">App Development</a>
+                </li>
+                <li class="nav-item-services">
+                    <a class="nav-link" id="web-tab" data-bs-toggle="tab" href="#web" role="tab" aria-controls="web"
+                        aria-selected="false">Web Development</a>
+                </li>
+                <li class="nav-item-services">
+                    <a class="nav-link" id="software-tab" data-bs-toggle="tab" href="#software" role="tab"
+                        aria-controls="software" aria-selected="false">Software Development</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="branding" role="tabpanel" aria-labelledby="branding-tab">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="container" style="border: solid 0.5px #474545;">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="icon mb-3">
+                                            <img src="/assets/Home Page/Product Design Icon.svg"
+                                                alt="Product Design Icon">
+                                        </div>
+                                        <h2 class="card-title">Product Design</h2>
+                                        <h4 class="card-subtitle mb-2">Every Step of the Way</h4>
+                                        <p class="card-text">$3,995/m</p>
+                                        <p class="card-text checklist">
+                                            <span class="checkmark">✔</span> Sr. Product Designer + Design lead<br>
+                                            <span class="checkmark">✔</span> Average 48-Hour Delivery or Less<br>
+                                            <span class="checkmark">✔</span> A-sync communication + Weekly calls<br>
+                                            <span class="checkmark">✔</span> Unlimited Design Potential<br>
+                                            <span class="checkmark">✔</span> Ongoing Revisions & Refinement<br>
+                                            <span class="checkmark">✔</span> Priority support, Always<br>
+                                            <span class="checkmark">✔</span> Pause or Cancel anytime
+                                        </p>
+                                        <a href="#" class="btn btn-lg btn-primary">Get Started</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="container" style="border: solid 0.5px #474545;">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="icon mb-3">
+                                            <img src="/assets/Home Page/Product Design Icon.svg"
+                                                alt="Product Design Icon">
+                                        </div>
+                                        <h2 class="card-title">Product Design</h2>
+                                        <h4 class="card-subtitle mb-2">Every Step of the Way</h4>
+                                        <p class="card-text">$3,995/m</p>
+                                        <p class="card-text checklist">
+                                            <span class="checkmark">✔</span> Sr. Product Designer + Design lead<br>
+                                            <span class="checkmark">✔</span> Average 48-Hour Delivery or Less<br>
+                                            <span class="checkmark">✔</span> A-sync communication + Weekly calls<br>
+                                            <span class="checkmark">✔</span> Unlimited Design Potential<br>
+                                            <span class="checkmark">✔</span> Ongoing Revisions & Refinement<br>
+                                            <span class="checkmark">✔</span> Priority support, Always<br>
+                                            <span class="checkmark">✔</span> Pause or Cancel anytime
+                                        </p>
+                                        <a href="#" class="btn btn-lg btn-primary">Get Started</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="container" style="border: solid 0.5px #474545;">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="icon mb-3">
+                                            <img src="/assets/Home Page/Product Design Icon.svg"
+                                                alt="Product Design Icon">
+                                        </div>
+                                        <h2 class="card-title">Product Design</h2>
+                                        <h4 class="card-subtitle mb-2">Every Step of the Way</h4>
+                                        <p class="card-text">$3,995/m</p>
+                                        <p class="card-text checklist">
+                                            <span class="checkmark">✔</span> Sr. Product Designer + Design lead<br>
+                                            <span class="checkmark">✔</span> Average 48-Hour Delivery or Less<br>
+                                            <span class="checkmark">✔</span> A-sync communication + Weekly calls<br>
+                                            <span class="checkmark">✔</span> Unlimited Design Potential<br>
+                                            <span class="checkmark">✔</span> Ongoing Revisions & Refinement<br>
+                                            <span class="checkmark">✔</span> Priority support, Always<br>
+                                            <span class="checkmark">✔</span> Pause or Cancel anytime
+                                        </p>
+                                        <a href="#" class="btn btn-lg btn-primary">Get Started</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="website" role="tabpanel" aria-labelledby="website-tab">
+                    <!-- Add content for Website Design -->
+                </div>
+                <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="app-tab">
+                    <!-- Add content for App Development -->
+                </div>
+                <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web-tab">
+                    <!-- Add content for Web Development -->
+                </div>
+                <div class="tab-pane fade" id="software" role="tabpanel" aria-labelledby="software-tab">
+                    <!-- Add content for Software Development -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- custom -->
+    <div class="container" data-aos="fade-up" style="margin-top: 10%;">
+        <section class="custom-section">
+            <h2 class="h2 section-title">Custom</h2>
+            <div class="row align-items-center mt-4">
+                <div class="col">
+                    <p class="content-text">
+                        For projects that require a specialized touch, we extend a bespoke array of technical and
+                        creative <u>services</u>.
+                    </p>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-outline-light quote-button">Get Quote</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Reviews -->
+    <div class="container reviews-container" data-aos="fade-up" style="margin-top: 10%;">
+        <h2 class="reviews-heading text-left">Reviews</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="review-card">
+                    <p>I have benefited from Jades' services for a full UI/UX project, with an engagement that
+                        lasted
+                        about 3 months. I couldn't be more enthusiastic about the intelligent, subtle and pragmatic
+                        approach taken by Amjad along the path I have benefited from Jades' services for a full
+                        UI/UX
+                        project, with an engagement that lasted about 3 months. I couldn't be more enthusiastic
+                        about
+                        the intelligent, subtle and pragmatic approach taken by Amjad along the path...</p>
+                    <div class="reviewer-info">
+                        <img src="/assets/Home Page/Review Person icon.png" alt="Reviewer">
+                        <div class="reviewer-details">
+                            <h5>Stephen Hubert</h5>
+                            <small>CEO @ Claty</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="review-card">
+                    <p>Great been working with you, awesome work and I like your engagement and collaboration to the
+                        project. Best team ever worked with.</p>
+                    <div class="reviewer-info">
+                        <img src="/assets/Home Page/Review Person icon.png" alt="Reviewer">
+                        <div class="reviewer-details">
+                            <h5>Stephen Hubert</h5>
+                            <small>CEO @ Claty</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="review-card">
+                    <p>Amjad was and still is my go-to expert when it comes to UX/UI work. His experience and talent
+                        encompasses product design, typography, color scheme selection and everything UX related...
+                    </p>
+                    <div class="reviewer-info">
+                        <img src="/assets/Home Page/Review Person icon.png" alt="Reviewer">
+                        <div class="reviewer-details">
+                            <h5>Stephen Hubert</h5>
+                            <small>CEO @ Claty</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="review-card">
+                    <p>I have benefited from Jades' services for a full UI/UX project, with an engagement that
+                        lasted
+                        about 3 months. I couldn't be more enthusiastic about the intelligent, subtle and pragmatic
+                        approach taken by Amjad along the path...</p>
+                    <div class="reviewer-info">
+                        <img src="/assets/Home Page/Review Person icon.png" alt="Reviewer">
+                        <div class="reviewer-details">
+                            <h5>Stephen Hubert</h5>
+                            <small>CEO @ Claty</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="review-card">
+                    <p>Great been working with you, awesome work and I like your engagement and collaboration to the
+                        project. Best team ever worked with I have benefited from Jades' services for a full UI/UX
+                        project, with an engagement that lasted about 3 months. I couldn't be more enthusiastic
+                        about
+                        the intelligent, subtle and pragmatic approach taken by Amjad along the path I have
+                        benefited
+                        from Jades' services for a full UI/UX project, with an engagement that lasted about 3
+                        months. I
+                        couldn't be more enthusiastic about the intelligent, subtle and pragmatic approach taken by
+                        Amjad along the path.</p>
+                    <div class="reviewer-info">
+                        <img src="/assets/Home Page/Review Person icon.png" alt="Reviewer">
+                        <div class="reviewer-details">
+                            <h5>Stephen Hubert</h5>
+                            <small>CEO @ Claty</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="review-card">
+                    <p>Amjad was and still is my go-to expert when it comes to UX/UI work. His experience and talent
+                        encompasses product design, typography, color scheme selection and everything UX related I
+                        have
+                        benefited from Jades' services for a full UI/UX project, with an engagement that lasted
+                        about 3
+                        months. I couldn't be more enthusiastic about the intelligent, subtle and pragmatic approach
+                        taken by Amjad along the path...</p>
+                    <div class="reviewer-info">
+                        <img src="/assets/Home Page/Review Person icon.png" alt="Reviewer">
+                        <div class="reviewer-details">
+                            <h5>Stephen Hubert</h5>
+                            <small>CEO @ Claty</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row more-reviews">
+            <div class="col-md-6">
+                <div class="review-card">
+                    <p>I have benefited from Jades' services for a full UI/UX project, with an engagement that
+                        lasted
+                        about 3 months. I couldn't be more enthusiastic about the intelligent, subtle and pragmatic
+                        approach taken by Amjad along the path...</p>
+                    <div class="reviewer-info">
+                        <img src="/assets/Home Page/Review Person icon.png" alt="Reviewer">
+                        <div class="reviewer-details">
+                            <h5>Stephen Hubert</h5>
+                            <small>CEO @ Claty</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="review-card">
+                    <p>Great been working with you, awesome work and I like your engagement and collaboration to the
+                        project. Best team ever worked with.</p>
+                    <div class="reviewer-info">
+                        <img src="/assets/Home Page/Review Person icon.png" alt="Reviewer">
+                        <div class="reviewer-details">
+                            <h5>Stephen Hubert</h5>
+                            <small>CEO @ Claty</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn dropdown-toggle" style="background: transparent; color: #D9D9D9;" id="toggle-reviews"
+                data-toggle="dropdown" aria-expanded="false">
+                See more reviews <span class="caret"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- More work Section -->
+    <div id="portfolio" class="container-fluid" data-aos="fade-up" style="margin-top: 5%;">
+        <div class="morework-section d-flex align-items-center justify-content-center flex-wrap position-relative overflow-hidden"
+            data-aos="zoom-in">
+            <div>
+                <img src="/assets/Home Page/kindpng.png" style="opacity: 0.3;" alt="">
+                <button class="btn btn-light position-absolute top-50 start-50 translate-middle">More work</button>
+            </div>
+            <div class="morework-item position-absolute top-10 start-10 w-15" data-depth="1"><img
+                    src="/assets/Home Page/Portfolio Images-1.png" alt="Image 1"></div>
+            <div class="morework-item position-absolute top-10 end-10 w-15" data-depth="2"><img
+                    src="/assets/Home Page/Portfolio Images-2.png" alt="Image 2"></div>
+            <div class="morework-item position-absolute top-35 start-20 w-15" data-depth="3"><img
+                    src="/assets/Home Page/Portfolio Images-3.png" alt="Image 3"></div>
+            <div class="morework-item position-absolute top-33 end-22 w-15" data-depth="4"><img
+                    src="/assets/Home Page/Portfolio Images-4.png" alt="Image 4"></div>
+            <div class="morework-item position-absolute bottom-10 start-10 w-15" data-depth="5"><img
+                    src="/assets/Home Page/Portfolio Images-5.png" alt="Image 5"></div>
+            <div class="morework-item position-absolute bottom-10 end-10 w-15" data-depth="6"><img
+                    src="/assets/Home Page/Portfolio Images-6.png" alt="Image 6"></div>
+            <div class="morework-item position-absolute top-20 start-50 translate-middle-x w-15" data-depth="7"><img
+                    src="/assets/Home Page/Portfolio Images-7.png" alt="Image 7"></div>
+            <div class="morework-item position-absolute bottom-10 end-50 translate-middle-x w-15" data-depth="8"><img
+                    src="/assets/Home Page/Portfolio Images.png" alt="Image 8"></div>
+        </div>
+    </div>
+
+    <!-- FAQS -->
+    <section class="container" data-aos="fade-up" style="margin-top: 10%;">
+        <div class="">
+            <h2 class="text-white reviews-heading text-left">FAQs </h2>
+        </div>
+        <div class="accordion" id="accordionExample">
+            <div class="mb-3 accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Who are the designers
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These
+                        classes control the overall appearance, as well as the showing and hiding via CSS
+                        transitions. You can modify any of this with custom CSS or overriding our default variables.
+                        It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Who are the designers
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until
+                        the collapse plugin adds the appropriate classes that we use to style each element. These
+                        classes control the overall appearance, as well as the showing and hiding via CSS
+                        transitions. You can modify any of this with custom CSS or overriding our default variables.
+                        It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Who are the designers
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These
+                        classes control the overall appearance, as well as the showing and hiding via CSS
+                        transitions. You can modify any of this with custom CSS or overriding our default variables.
+                        It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- let's partner up button -->
+    <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-12 d-flex justify-content-center">
+            <button class="home-button">
+              <span class="first">Let’s Partner up</span>
+              <span class="second">Let’s Partner up</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    <!-- Footer -->
+    <footer class="footer" data-aos="fade-up">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-md-0 mb-3 text-center text-md-start">
+                    <div class="left-content">
+                        Narwhal3 ©2024
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center justify-content-md-end">
+                    <div class="right-content">
+                        <a href="https://twitter.com" class="me-3">Twitter</a>
+                        <a href="https://behance.net" class="me-3">Behance</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-7 foot-image">
+                    <img src="/assets/Home Page/FooterImage.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-5">
+                    <img src="/assets/Home Page/NarwhalImage.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/index.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+    AOS.init({
+        offset: 50,
+    });
+</script>
+
+</html>

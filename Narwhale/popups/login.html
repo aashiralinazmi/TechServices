@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Modal</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Container for the entire form */
+  .main-container {
+    padding: 50px 0;
+    background-color: black;
+  }
+
+  /* Logo styling */
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+
+  /* Login form container */
+  .form-container {
+    background-color: black;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Titles and messages */
+  .login-title {
+    color: #00ffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .login-subtitle,
+  .login-message {
+    text-transform: capitalize;
+    background: linear-gradient(269deg, #fff -7.02%, #424242 109.28%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 10px;
+    font: 700 25px 'Space Grotesk', sans-serif;
+  }
+
+  /* Form elements */
+  .form-control {
+    margin-bottom: 15px;
+    color: #d9d9d9;
+    background-color: transparent;
+  }
+
+  .form-control::placeholder {
+    color: #d9d9d9;
+  }
+
+  .username-field,
+  .password-field {
+    height: 45px;
+    padding: 10px 15px;
+    border: 0.5px solid #474547;
+    border-radius: 4px;
+  }
+
+  /* Form options and buttons */
+  .form-options {
+    margin-bottom: 20px;
+  }
+
+  .remember-password {
+    color: #d9d9d9;
+    font-size: 14px;
+  }
+
+  .remember-password-label {
+    cursor: pointer;
+  }
+
+  .forgot-password {
+    color: #d9d9d9;
+  }
+
+  .signin-button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #00ffff;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .signin-button:hover {
+    background-color: black;
+    color: #00ffff;
+  }
+
+  /* Social login buttons */
+  .social-login {
+    color: #d9d9d9;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .google-login,
+  .apple-login {
+    color: #d9d9d9;
+    display: flex;
+    align-items: center;
+    border: 0.5px solid #474547;
+    border-radius: 4px;
+    cursor: pointer;
+    background: transparent;
+    gap: 10px;
+    margin: 5px;
+  }
+
+  .google-logo,
+  .apple-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+
+  /* Footer message and link */
+  .footer-message {
+    color: #d9d9d9;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .bold-underline {
+    font-weight: bold;
+  }
+
+  /* Custom styles */
+  .registration-image-container {
+    position: absolute;
+    height: 600px;
+    overflow-y: hidden;
+  }
+
+  .registration-background-image {
+    width: 100%;
+    height: auto;
+    object-fit: left;
+  }
+
+  .content-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-container {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  /* Custom modal styles */
+  .modal-content {
+    background-color: black;
+  }
+
+  .modal-header, .modal-body {
+    border: none;
+  }
+
+  .modal-header .close {
+    color: #fff;
+  }
+
+  /* Responsive design */
+  @media (max-width: 992px) {
+    .registration-image-container {
+      display: none;
+    }
+
+    .content-column {
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .login-title {
+      font-size: 20px;
+    }
+
+    .login-subtitle,
+    .login-message {
+      font-size: 20px;
+    }
+
+    .signin-button {
+      padding: 10px;
+    }
+
+    .form-container {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .login-title {
+      font-size: 18px;
+    }
+
+    .login-subtitle,
+    .login-message {
+      font-size: 18px;
+    }
+
+    .signin-button {
+      padding: 8px;
+    }
+
+    .form-container {
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: 200px) {
+    .form-container {
+      padding: 10px;
+    }
+
+    .login-title {
+      font-size: 16px;
+    }
+
+    .login-subtitle,
+    .login-message {
+      font-size: 16px;
+    }
+
+    .signin-button {
+      padding: 5px;
+      font-size: 12px;
+    }
+
+    .username-field,
+    .password-field {
+      height: 30px;
+      padding: 5px;
+      font-size: 12px;
+    }
+
+    .remember-password,
+    .forgot-password,
+    .social-login,
+    .footer-message {
+      font-size: 12px;
+    }
+
+    .google-login,
+    .apple-login {
+      padding: 5px;
+      font-size: 12px;
+      margin: 10px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Button to trigger modal -->
+  <button type="button" class="btn btn" data-bs-toggle="modal" data-bs-target="#loginModal" style="background-color: #00ffff;">
+    Sign In
+  </button>
+
+<!-- Modal Structure -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <section class="registration-main-wrapper" id="registrationForm">
+            <div class="row">
+              <div class="col-md-6 d-flex justify-content-end">
+                <div class="registration-image-container bg-warning">
+                  <img loading="lazy" src="/assets/Popup/Holloway-Narwhals 1.png" alt="Decorative background image"
+                    class="registration-background-image" />
+                  <div class="registration-image-overlay"></div>
+                </div>
+              </div>
+              <div class="col-md-6 content-column">
+                <form class="form-container">
+                  <h2 class="login-title">Login</h2>
+                  <h3 class="login-subtitle">Sign in to your account</h3>
+                  <p class="login-message">Welcome back! Please enter your details</p>
+
+                  <input class="form-control username-field" type="email" id="username" placeholder="Username/ Email"
+                    aria-label="Username or Email" />
+
+                  <input class="form-control password-field" type="password" id="password" placeholder="Password"
+                    aria-label="Password" />
+
+                  <div class="form-check form-options d-flex align-items-center justify-content-between">
+                    <div class="form-check-inline remember-password">
+                      <input type="checkbox" class="form-check-input remember-password-checkbox" id="remember" />
+                      <label for="remember" class="form-check-label remember-password-label">Remember Password</label>
+                    </div>
+                    <a href="#" class="forgot-password text-decoration-underline">Forgot Password</a>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary signin-button">Sign In</button>
+
+                  <p class="social-login text-center mt-4">or sign in with</p>
+                  <div class="d-flex flex-column gap-2">
+                    <button type="button" class="btn btn-outline-secondary google-login">
+                      <img src="/assets/Popup/Google logo.svg" alt="Google logo" class="google-logo"/>
+                      <span>Continue with Google</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary apple-login">
+                      <img src="/assets/Popup/Apple.svg" alt="Apple logo" class="apple-logo"/>
+                      <span>Continue with Apple</span>
+                    </button>
+                  </div>
+
+                  <p class="footer-message text-center mt-4">
+                    Don't have an account?
+                    <a href="#" class="text-decoration-underline bold-underline">Signup</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    /* Reset default anchor tag styles */
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Container for the entire form */
+    .forgot-main-container {
+      background-color: black;
+    }
+
+    /* Logo styling */
+    .forgot-logo {
+      width: 150px;
+      height: auto;
+    }
+
+    /* Login form container */
+    .forgot-form-container {
+      background-color: black;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Titles and messages */
+    .forgot-title {
+      color: #00ffff;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .forgot-subtitle {
+      text-transform: capitalize;
+      background: linear-gradient(269deg, #fff -7.02%, #424242 109.28%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 10px;
+      font: 700 25px 'Space Grotesk', sans-serif;
+    }
+
+    .forgot-message {
+      text-transform: capitalize;
+      color: #424242;
+      margin-top: 10px;
+      font: 300 16px 'Space Grotesk', sans-serif;
+    }
+
+    /* Form elements */
+    .forgot-form-control {
+      margin-bottom: 15px;
+      color: #d9d9d9;
+      background-color: transparent;
+    }
+
+    .forgot-form-control::placeholder {
+      color: #d9d9d9;
+    }
+
+    .forgot-username-field {
+      height: 45px;
+      padding: 10px 15px;
+      border: 0.5px solid #474547;
+      border-radius: 4px;
+    }
+
+    /* Form options and buttons */
+    .forgot-form-options {
+      margin-bottom: 20px;
+    }
+
+    .forgot-remember-password {
+      color: #d9d9d9;
+      font-size: 14px;
+    }
+
+    .forgot-remember-password-label {
+      cursor: pointer;
+    }
+
+    .forgot-password {
+      color: #d9d9d9;
+    }
+
+    .forgot-verification-button {
+      width: 100%;
+      padding: 12px 20px;
+      background-color: #00ffff;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .forgot-verification-button:hover {
+      background-color: black;
+      color: #00ffff;
+    }
+
+    /* Social login buttons */
+    .forgot-social-signup {
+      color: #d9d9d9;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .forgot-google-signup,
+    .forgot-apple-signup {
+      color: #d9d9d9;
+      display: flex;
+      align-items: center;
+      border: 0.5px solid #474547;
+      border-radius: 4px;
+      cursor: pointer;
+      background: transparent;
+      gap: 10px;
+    }
+
+    .forgot-google-logo,
+    .forgot-apple-logo {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    /* Footer message and link */
+    .forgot-footer-message {
+      color: #d9d9d9;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .forgot-bold-underline {
+      font-weight: bold;
+    }
+
+    /* Custom styles */
+    .forgot-registration-image-container {
+      height: 515px; /* Fixed height */
+      overflow: hidden;
+    }
+
+    .forgot-registration-background-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .forgot-content-column {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 15px;
+    }
+
+    .forgot-form-container {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .forgot-registration-image-container {
+        height: 200px;
+      }
+
+      .forgot-form-container {
+        padding: 15px;
+      }
+
+      .forgot-subtitle {
+        font-size: 20px;
+      }
+
+      .forgot-message {
+        font-size: 14px;
+      }
+
+      .forgot-verification-button {
+        padding: 10px 15px;
+      }
+
+      .forgot-google-signup,
+      .forgot-apple-signup {
+        font-size: 14px;
+      }
+
+      .forgot-footer-message {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .forgot-registration-image-container {
+        display: none;
+      }
+
+      .forgot-content-column {
+        padding: 15px;
+      }
+
+      .forgot-form-container {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body style="background-color: black;">
+  <!-- Trigger Button for Modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ForgotPasswordModal">
+    Forgot Password
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="ForgetPasswordModal" tabindex="-1" aria-labelledby="ForgotPasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content forgot-main-container">
+        <div class="container-fluid">
+          <div class="row g-0">
+            <div class="col-md-6 forgot-registration-image-container">
+              <img loading="lazy" src="/assets/Popup/Holloway-Narwhals 1.png" alt="Decorative background image" class="forgot-registration-background-image" />
+            </div>
+            <div class="col-md-6 forgot-content-column">
+              <form class="forgot-form-container">
+                <h2 class="forgot-title">Forget Password</h2>
+                <h3 class="forgot-subtitle">Enter Email Address</h3>
+                <p class="forgot-message">We will send a link to your email address, kindly enter it for a new password</p>
+                <input class="form-control forgot-username-field" type="text" id="forgot-username" placeholder="Email Address" aria-label="Username or Email" />
+                <button type="submit" class="btn forgot-verification-button">Send Verification Code</button>
+                <p class="forgot-social-signup text-center mt-4">or sign in with</p>
+                <div class="d-flex flex-column gap-2">
+                  <button type="button" class="btn btn-light forgot-google-signup">
+                    <img src="/assets/Popup/Google logo.svg" alt="Google logo" />
+                    <span>Continue with Google</span>
+                  </button>
+                  <button type="button" class="btn btn-light forgot-apple-signup">
+                    <img src="/assets/Popup/Apple.svg" alt="Apple logo" />
+                    <span>Continue with Apple</span>
+                  </button>
+                </div>
+                <p class="forgot-footer-message text-center mt-4">
+                  Don't have an account?
+                  <a href="#" class="text-decoration-underline forgot-bold-underline">Signup</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn continue-button" data-bs-toggle="modal"
+  data-bs-target="#ForgetModal">Send Verification Code</button>
+  <!-- Optional JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>

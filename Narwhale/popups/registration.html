@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Modal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+   /* Custom CSS for the registration form modal */
+.rform-main-wrapper {
+  border-radius: 5px;
+  margin: 5%;
+  opacity: 0;
+}
+
+.rform-main-wrapper.show {
+  opacity: 1;
+}
+
+.rform-image-container {
+  position: relative;
+  min-height: 784px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.rform-background-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.rform-image-overlay {
+  position: relative;
+  background-color: rgba(57, 63, 63, 0.2);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.rform-form-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rform-form-wrapper {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 30px;
+}
+
+.rform-register-title {
+  color: #00ffff;
+  line-height: 150%;
+}
+
+.rform-create-account {
+  text-transform: capitalize;
+  background: linear-gradient(269deg, #fff -7.02%, #424242 109.28%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10px;
+  font: 700 32px 'Space Grotesk', sans-serif;
+}
+
+.rform-form-description {
+  color: rgba(217, 217, 217, 0.7);
+  text-align: center;
+  line-height: 150%;
+  margin-top: 10px;
+}
+
+.rform-form-control {
+  border: 0.5px solid #424242;
+  border-radius: 5px;
+  background-color: transparent;
+  margin: 10px;
+}
+
+.rform-form-control::placeholder {
+  color: #d9d9d9;
+}
+
+.rform-submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: linear-gradient(109deg, #fff -23.95%, #aafff5 -23.95%, #00ffe0 99.39%);
+  margin-top: 40px;
+  color: #1e1e1e;
+  padding: 15px 30px;
+  font: 700 22px 'Space Grotesk', sans-serif;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.rform-social-signup,
+.rform-apple-signup {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+  border-radius: 5px;
+  background-color: #181919;
+  color: rgba(217, 217, 217, 0.7);
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.rform-google-icon,
+.rform-apple-icon {
+  width: 36px;
+}
+
+.rform-login-text {
+  color: #d9d9d9;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: underline;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .rform-main-wrapper {
+    margin: 5% 1%;
+  }
+
+  .rform-image-container {
+    min-height: 300px;
+  }
+
+  .rform-form-wrapper {
+    padding: 20px;
+  }
+
+  .rform-form-group {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .rform-form-column {
+    padding: 20px;
+  }
+
+  .rform-form-control {
+    margin-bottom: 15px;
+  }
+
+  .rform-form-group {
+    margin-bottom: 15px;
+  }
+
+  .rform-submit-button {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- Button to trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registrationModal">
+    Open Registration Modal
+  </button>
+
+  <!-- Modal -->
+ <!-- Modal -->
+<div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registrationModalLabel">Registration</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Registration form content -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 order-md-1">
+              <div class="rform-image-container">
+                <img loading="lazy" src="/assets/Popup/Holloway-Narwhals 1.png" alt="Decorative background image" class="rform-background-image" />
+                <div class="rform-image-overlay"></div>
+              </div>
+            </div>
+            <div class="col-md-6 order-md-2 rform-form-column">
+              <div class="rform-form-wrapper">
+                <h1 class="rform-register-title">Register</h1>
+                <p class="rform-create-account">Create new account</p>
+                <p class="rform-form-description">Please enter your details</p>
+                <div class="form-group rform-form-group">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label for="rform-firstName" class="sr-only">First Name</label>
+                      <input type="text" id="rform-firstName" class="form-control rform-form-control" placeholder="First Name" aria-label="First Name" />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="rform-lastName" class="sr-only">Last Name</label>
+                      <input type="text" id="rform-lastName" class="form-control rform-form-control" placeholder="Last Name" aria-label="Last Name" />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group rform-form-group">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label for="rform-occupation" class="sr-only">Occupation</label>
+                      <input type="text" id="rform-occupation" class="form-control rform-form-control" placeholder="Occupation" aria-label="Occupation" />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="rform-brandName" class="sr-only">Brand Name</label>
+                      <input type="text" id="rform-brandName" class="form-control rform-form-control" placeholder="Brand Name (optional)" aria-label="Brand Name" />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group rform-form-group">
+                  <label for="rform-email" class="sr-only">Email Address</label>
+                  <input type="email" id="rform-email" class="form-control rform-form-control" placeholder="Email Address" aria-label="Email Address" />
+                </div>
+                <div class="form-group rform-form-group">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label for="rform-phoneCode" class="sr-only">Phone Code</label>
+                      <input type="text" id="rform-phoneCode" class="form-control rform-form-control" placeholder="00" aria-label="Phone Code" />
+                    </div>
+                    <div class="col-md-9">
+                      <label for="rform-phoneNumber" class="sr-only">Phone Number</label>
+                      <input type="text" id="rform-phoneNumber" class="form-control rform-form-control" placeholder="Phone Number" aria-label="Phone Number" />
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn rform-submit-button">Create my account</button>
+                <p class="text-center mt-4" style="color: #d9d9d9;">or signup with</p>
+                <a href="https://accounts.google.com/" class="rform-social-signup">
+                  <img loading="lazy" src="/assets/Popup/Google logo.svg" alt="Google Icon" class="rform-google-icon">
+                  <div class="ml-2">Continue with Google</div>
+                </a>
+                <a href="https://appleid.apple.com/" class="rform-apple-signup">
+                  <img loading="lazy" src="/assets/Popup/Apple.svg" alt="Apple Icon" class="rform-apple-icon">
+                  <div class="ml-2">Continue with Apple</div>
+                </a>
+                <p class="rform-login-text">Already a member?
+                  <a href="#" class="rform-login-link" style="color: #d9d9d9;">Login</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!-- Additional modal footer buttons if needed -->
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Optional JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('registrationForm');
+      form.classList.add('show');
+    });
+  </script>
+</body>
+
+</html>

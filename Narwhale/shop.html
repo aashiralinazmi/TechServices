@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="background-image">
+    <img src="/assets/Home Page/background-image.png" alt="Background Image">
+  </div>
+  <!-- Navbar -->
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top container mt-2 mynav">
+      <div class="container">
+        <a class="navbar-brand" href="home.html">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c3e7c5ea38fb32302a94e7c73298c558769a811b96582fdf24bea5d8330bd129?apiKey=38506aaa2b0847d8ae31c3c37ca88863&"
+            alt="Company logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="color: #D9D9D9;" href="home.html#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: #D9D9D9;" href="#!">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: #D9D9D9;" href="home.html#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: #D9D9D9;" href="Blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: #D9D9D9;" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn" data-bs-toggle="modal" data-bs-target="#loginModal"
+                style="background-color: #00ffff;">
+                Sign In
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Navbar -->
+
+  <!-- MODALS -->
+    <!--Login In. -->
+    <div class="login">
+      <!-- Modal Structure -->
+      <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                      <button type="button" class="btn-close text-white" data-bs-dismiss="modal"
+                          aria-label="Close">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="container">
+                          <section class="registration-main-wrapper" id="registrationForm">
+                              <div class="row">
+                                  <div class="col-md-6 d-flex justify-content-end">
+                                      <div class="registration-image-container bg-warning">
+                                          <img loading="lazy" src="/assets/Popup/Holloway-Narwhals 1.png"
+                                              alt="Decorative background image"
+                                              class="registration-background-image" />
+                                          <div class="registration-image-overlay"></div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6 content-column">
+                                      <form class="form-container">
+                                          <h2 class="login-title">Login</h2>
+                                          <h3 class="login-subtitle">Sign in to your account</h3>
+                                          <p class="login-message">Welcome back! Please enter your details</p>
+                                          <input class="form-control username-field" type="email" id="username"
+                                              placeholder="Username/ Email" aria-label="Username or Email" />
+                                          <input class="form-control password-field" type="password" id="password"
+                                              placeholder="Password" aria-label="Password" />
+                                          <div
+                                              class="form-check form-options d-flex align-items-center justify-content-between">
+                                              <div class="form-check-inline remember-password">
+                                                  <input type="checkbox"
+                                                      class="form-check-input remember-password-checkbox"
+                                                      id="remember" />
+                                                  <label for="remember"
+                                                      class="form-check-label remember-password-label">Remember
+                                                      Password</label>
+                                              </div>
+                                              <button type="button" class="btn text-white" data-bs-toggle="modal"
+                                                  data-bs-target="#confirmemailModal">Forget Password</button>
+                                          </div>
+                                          <button type="submit" class="btn btn-primary signin-button">Sign In</button>
+                                          <p class="social-login text-center mt-4">or sign in with</p>
+                                          <div class="d-flex flex-column gap-2">
+                                              <button type="button" class="btn btn-outline-secondary google-login">
+                                                  <img src="/assets/Popup/Google logo.svg" alt="Google logo"
+                                                      class="google-logo" />
+                                                  <span>Continue with Google</span>
+                                              </button>
+                                              <button type="button" class="btn btn-outline-secondary apple-login">
+                                                  <img src="/assets/Popup/Apple.svg" alt="Apple logo"
+                                                      class="apple-logo" />
+                                                  <span>Continue with Apple</span>
+                                              </button>
+                                          </div>
+                                          <div class="footer-message text-center mt-4 d-grid gap-2">
+                                              <p class="m-0">Don't have an account? <a data-bs-toggle="modal"
+                                                      data-bs-target="#registrationModal">Sign Up</a></p>
+                                          </div>
+                                  </div>
+                                  </form>
+                              </div>
+                      </div>
+                      </section>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- forgot modal -->
+  <div class="modal fade" id="ForgetModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+              <div class="fp">
+                  <div class="container">
+                      <section class="registration-main-wrapper" id="registrationForm">
+                          <div class="row">
+                              <div class="col-md-6 d-flex justify-content-end">
+                                  <div class="registration-image-container">
+                                      <img loading="lazy" src="/assets/Popup/Holloway-Narwhals 1.png"
+                                          alt="Decorative background image" class="registration-background-image" />
+                                      <div class="registration-image-overlay"></div>
+                                  </div>
+                              </div>
+                              <div class="col-md-6 content-column">
+                                  <form class="form-container">
+                                      <h2 class="signup2-title">Forget Password</h2>
+                                      <h3 class="signup2-subtitle"> Enter New Password </h3>
+                                      <p class="signup2-message">Welcome back! Please enter your details</p>
+                                      <input class="form-control pswd-field" type="text" id="password"
+                                          placeholder="New Password" aria-label="Username or Email" />
+                                      <input class="form-control newpswd-field" type="password" id="password"
+                                          placeholder="Confirm New Password" aria-label="Password" />
+                                      <button type="button" class="btn Continue-button" data-bs-toggle="modal"
+                                          data-bs-target="#confirmemailModal">Continue</button>
+                                      <p class="social-signup2 text-center mt-4">or sign in with</p>
+                                      <div class="d-flex flex-column gap-2">
+                                          <button type="button" class="btn btn-light google-signup2">
+                                              <img src="/assets/Popup/Google logo.svg" alt="Google logo" />
+                                              <span>Continue with Google</span>
+                                          </button>
+                                          <button type="button" class="btn btn-light apple-signup2">
+                                              <img src="/assets/Popup/Apple.svg" alt="Apple logo" />
+                                              <span>Continue with Apple</span>
+                                          </button>
+                                      </div>
+                                      <div class="footer-message">
+                                          <p class="mt-5">
+                                              Don't have an account?
+                                              <a data-bs-toggle="modal" data-bs-target="#registrationModal">Sign
+                                                  Up</a>
+                                          </p>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                      </section>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- confirm modal -->
+  <div class="modal fade" id="confirmemailModal" tabindex="-1" aria-labelledby="ForgotPasswordModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content forgot-main-container">
+              <div class="container-fluid">
+                  <div class="row g-0">
+                      <div class="col-md-6 forgot-registration-image-container">
+                          <img loading="lazy" src="/assets/Popup/Holloway-Narwhals 1.png"
+                              alt="Decorative background image" class="forgot-registration-background-image" />
+                      </div>
+                      <div class="col-md-6 forgot-content-column">
+                          <form class="forgot-form-container">
+                              <h2 class="forgot-title">Forget Password</h2>
+                              <h3 class="forgot-subtitle">Enter Email Address</h3>
+                              <p class="forgot-message">We will send a link to your email address, kindly enter it for
+                                  a new password</p>
+                              <input class="form-control forgot-username-field" type="text" id="forgot-username"
+                                  placeholder="Email Address" aria-label="Username or Email" />
+                              <button type="button" class="btn forgot-verification-button continue-button"
+                                  data-bs-toggle="modal" data-bs-target="#ForgetModal">Send Verification Code</button>
+                              <p class="forgot-social-signup text-center mt-4">or sign in with</p>
+                              <div class="d-flex flex-column gap-2">
+                                  <button type="button" class="btn btn-light forgot-google-signup">
+                                      <img src="/assets/Popup/Google logo.svg" alt="Google logo" />
+                                      <span>Continue with Google</span>
+                                  </button>
+                                  <button type="button" class="btn btn-light forgot-apple-signup">
+                                      <img src="/assets/Popup/Apple.svg" alt="Apple logo" />
+                                      <span>Continue with Apple</span>
+                                  </button>
+                              </div>
+                              <p class="forgot-footer-message text-center mt-4">
+                                  Don't have an account?
+                                  <a  data-bs-toggle="modal" data-bs-target="#registrationModal" class="text-decoration-underline forgot-bold-underline">Signup</a>
+                              </p>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Registration -->
+  <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="registrationModalLabel">Registration</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+              </div>
+              <div class="modal-body">
+                  <!-- Registration form content -->
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-6 order-md-1">
+                              <div class="rform-image-container">
+                                  <img loading="lazy" src="/assets/Popup/Holloway-Narwhals 1.png"
+                                      alt="Decorative background image" class="rform-background-image" />
+                                  <div class="rform-image-overlay"></div>
+                              </div>
+                          </div>
+                          <div class="col-md-6 order-md-2 rform-form-column">
+                              <div class="rform-form-wrapper">
+                                  <h1 class="rform-register-title">Register</h1>
+                                  <p class="rform-create-account">Create new account</p>
+                                  <p class="rform-form-description">Please enter your details</p>
+                                  <div class="form-group rform-form-group">
+                                      <div class="row">
+                                          <div class="col-md-6">
+                                              <input type="text" id="rform-firstName"
+                                                  class="form-control rform-form-control" placeholder="First Name"
+                                                  aria-label="First Name" />
+                                          </div>
+                                          <div class="col-md-6">
+                                              <input type="text" id="rform-lastName"
+                                                  class="form-control rform-form-control" placeholder="Last Name"
+                                                  aria-label="Last Name" />
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="form-group rform-form-group">
+                                      <div class="row">
+                                          <div class="col-md-5">
+                                              <input type="text" id="rform-occupation"
+                                                  class="form-control rform-form-control" placeholder="Occupation"
+                                                  aria-label="Occupation" />
+                                          </div>
+                                          <div class="col-md-7">
+                                              <input type="text" id="rform-brandName"
+                                                  class="form-control rform-form-control option"
+                                                  placeholder="Brand Name (optional)" aria-label="Brand Name" />
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="form-group rform-form-group">
+                                      <input type="email" id="rform-email" class="form-control rform-form-control"
+                                          placeholder="Email Address" aria-label="Email Address" />
+                                  </div>
+                                  <div class="form-group rform-form-group">
+                                      <div class="row">
+                                          <div class="col-md-3">
+                                              <input type="text" id="rform-phoneCode"
+                                                  class="form-control rform-form-control" placeholder="00"
+                                                  aria-label="Phone Code" />
+                                          </div>
+                                          <div class="col-md-9">
+                                              <input type="text" id="rform-phoneNumber"
+                                                  class="form-control rform-form-control" placeholder="Phone Number"
+                                                  aria-label="Phone Number" />
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <button type="submit" class="btn rform-submit-button">Create my account</button>
+                                  <p class="text-center mt-4" style="color: #d9d9d9;">or signup with</p>
+                                  <a href="https://accounts.google.com/" class="rform-social-signup">
+                                      <img loading="lazy" src="/assets/Popup/Google logo.svg" alt="Google Icon"
+                                          class="rform-google-icon">
+                                      <div class="ml-2">Continue with Google</div>
+                                  </a>
+                                  <a href="https://appleid.apple.com/" class="rform-apple-signup">
+                                      <img loading="lazy" src="/assets/Popup/Apple.svg" alt="Apple Icon"
+                                          class="rform-apple-icon">
+                                      <div class="ml-2">Continue with Apple</div>
+                                  </a>
+                                  <p class="rform-login-text">Already a member?
+                                      <button type="button" class="btn text-white" data-bs-toggle="modal"
+                                          data-bs-target="#loginModal">Log
+                                          In</button>
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- MODALS -->
+
+
+
+  <!-- intro -->
+  <div class="container" data-aos="fade-up">
+    <div class="row justify-content-left" style="margin-top: 10%;">
+      <div class="col-md-8">
+        <h1 class="shop-page-title mt-5">Shop Page Title</h1>
+      </div>
+    </div>
+  </div>
+  <!-- main content -->
+  <section class="container" data-aos="fade-up">
+    <div class="row">
+      <div class="col-md-4 mb-3 shop-column">
+        <div class="card shop-card">
+          <span class="shop-sale-badge">Sale</span>
+          <img loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/18bd7d605d6717b142dbc0fc3650a8a9ce8a05c97d9f7112c5a4ad56eb7bd6dd?apiKey=c6eeb6072f5c4ef28e9eef63948b64b6&"
+            alt="Croc Plush" class="shop-product-image" />
+          <div class="shop-product-details">
+            <span class="shop-product-name">Croc Plush</span>
+            <span class="shop-product-price">35$</span>
+          </div>
+          <p class="shop-product-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+          <button class="shop-order-button">Order now</button>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3 shop-column">
+        <div class="card shop-card">
+          <span class="shop-sale-badge">Sale</span>
+          <img loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/d1c0e35a3e317b9ff57056a02d3668591f7b26b7a61f1f80a22dbff89800131d?apiKey=c6eeb6072f5c4ef28e9eef63948b64b6&"
+            alt="Liquid Tree" class="shop-product-image" style="aspect-ratio:0.88;width:254px; height: 55%;" />
+          <div class="shop-product-details">
+            <span class="shop-product-name">Liquid Tree</span>
+            <span class="shop-product-price">35$</span>
+          </div>
+          <p class="shop-product-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+          <button class="shop-order-button">Order now</button>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3 shop-column">
+        <div class="card shop-card">
+          <span class="shop-sale-badge">Sale</span>
+          <img loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/18bd7d605d6717b142dbc0fc3650a8a9ce8a05c97d9f7112c5a4ad56eb7bd6dd?apiKey=c6eeb6072f5c4ef28e9eef63948b64b6&"
+            alt="Croc Plush" class="shop-product-image" />
+          <div class="shop-product-details">
+            <span class="shop-product-name">Croc Plush</span>
+            <span class="shop-product-price">35$</span>
+          </div>
+          <p class="shop-product-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </p>
+          <button class="shop-order-button">Order now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- details -->
+  <div class="container" data-aos="fade-up">
+    <div class="row justify-content-left">
+      <div class="col-md-8">
+        <h1 class="shop-page-title mt-5">Projects</h1>
+      </div>
+      <section class="container">
+        <div class="row">
+          <div class="col shop-text-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Images -->
+  <div class="container d-flex flex-column align-items-center" style="margin-top: 10%;">
+    <section class="shop-content-section">
+        <img src="/assets/shop/shop-1.png" alt="" class="shop-background-image img-fluid" />
+        <div class="shop-call-to-action-wrapper d-flex gap-2">
+            <button class="shop-cta-button btn">Know more</button>
+            <div class="shop-icon-wrapper d-flex align-items-center justify-content-center">
+                <img loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/8606617cf6e009e863bb258ea1b9dbd5d84d54ffafcea01fd9f152a5b9039a60?apiKey=c6eeb6072f5c4ef28e9eef63948b64b6&"
+                    alt="external link icon" class="shop-icon img-fluid" />
+            </div>
+        </div>
+        <div class="shop-overlay-content">
+            <h1 class="shop-project-title">
+                Project <span style="color: #00ffff;">Croc</span>
+            </h1>
+            <p class="shop-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat..... <a href="project.html">Read more</a>
+            </p>
+            <div class="shop-tags-wrapper d-flex flex-wrap gap-2">
+                <span class="shop-tag"> <span style="color: #00ffff;">●</span> Pollution</span>
+                <span class="shop-tag"> <span style="color: #00ffff;">●</span> Humanitarian</span>
+                <span class="shop-tag"> <span style="color: #00ffff;">●</span> Entrepreneurship</span>
+                <span class="shop-tag"> <span style="color: #00ffff;">●</span> Reforestation</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="shop-content-section">
+        <img src="/assets/shop/shop-2.png" alt="" class="shop-background-image img-fluid" />
+        <div class="shop-call-to-action-wrapper d-flex gap-2">
+            <button class="shop-cta-button btn">Know more</button>
+            <div class="shop-icon-wrapper d-flex align-items-center justify-content-center">
+                <img loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/8606617cf6e009e863bb258ea1b9dbd5d84d54ffafcea01fd9f152a5b9039a60?apiKey=c6eeb6072f5c4ef28e9eef63948b64b6&"
+                    alt="external link icon" class="shop-icon img-fluid" />
+            </div>
+        </div>
+        <div class="shop-overlay-content">
+            <h1 class="shop-project-title">
+                Project <span style="color: #00ffff;">Urban Trees</span>
+            </h1>
+            <p class="shop-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat..... <a href="project.html">Read more</a>
+            </p>
+            <div class="shop-tags-wrapper d-flex flex-wrap gap-2">
+                <span class="shop-tag"><span style="color: #00ffff;">●</span> Pollution</span>
+                <span class="shop-tag"><span style="color: #00ffff;">●</span> Humanitarian</span>
+                <span class="shop-tag"><span style="color: #00ffff;">●</span> Entrepreneurship</span>
+                <span class="shop-tag"><span style="color: #00ffff;">●</span> Reforestation</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="shop-content-section">
+        <img src="/assets/shop/shop-3.png" alt="" class="shop-background-image img-fluid" />
+        <div class="shop-call-to-action-wrapper d-flex gap-2">
+            <button class="shop-cta-button btn">Know more</button>
+            <div class="shop-icon-wrapper d-flex align-items-center justify-content-center">
+                <img loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/8606617cf6e009e863bb258ea1b9dbd5d84d54ffafcea01fd9f152a5b9039a60?apiKey=c6eeb6072f5c4ef28e9eef63948b64b6&"
+                    alt="external link icon" class="shop-icon img-fluid" />
+            </div>
+        </div>
+        <div class="shop-overlay-content">
+            <h1 class="shop-project-title">
+                The Narwhale <span style="color: #00ffff;">Rescue Ranch</span>
+            </h1>
+            <p class="shop-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat..... <a href="project.html">Read more</a>
+            </p>
+            <div class="shop-tags-wrapper d-flex flex-wrap gap-2">
+                <span class="shop-tag"> <span style="color: #00ffff;">●</span> Pollution</span>
+                <span class="shop-tag"> <span style="color: #00ffff;">●</span> Humanitarian</span>
+                <span class="shop-tag"> <span style="color: #00ffff;">●</span> Entrepreneurship</span>
+                <span class="shop-tag"> <span style="color: #00ffff;">●</span> Reforestation</span>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<!-- button -->
+  <div class="container mt-4 mb-4" data-aos="fade-up">
+    <div class="row justify-content-center">
+      <div class="col-12 d-flex justify-content-center">
+        <button class="shop-partner-button">
+          Let’s Partner up
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer" data-aos="fade-up">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-md-0 mb-3 text-center text-md-start">
+          <div class="left-content">
+            Narwhal3 ©2024
+          </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center justify-content-md-end">
+          <div class="right-content">
+            <a href="https://twitter.com" class="me-3">Twitter</a>
+            <a href="https://behance.net" class="me-3">Behance</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-7 foot-image">
+          <img src="/assets/Home Page/FooterImage.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-5">
+          <img src="/assets/Home Page/NarwhalImage.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/index.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+  AOS.init({
+    offset: 50,
+  });
+</script>
+
+</html>
